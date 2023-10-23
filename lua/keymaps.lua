@@ -39,3 +39,5 @@ vim.keymap.set('n', '<C-t>', ':FloatermToggle<CR>', opts)
 --let g:floaterm_width = 0.7
 --let g:floaterm_height = 0.7
 
+-- nvim tree toggle
+vim.api.nvim_create_user_command('Ex', function() vim.cmd.NvimTreeToggle() end, {})
