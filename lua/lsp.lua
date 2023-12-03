@@ -10,8 +10,17 @@ require('mason').setup({
 
 require('mason-lspconfig').setup({
     -- A list of servers to automatically install if they're not already installed
-    -- phpactor
-    ensure_installed = { 'lua_ls', 'rust_analyzer', 'intelephense'},
+    ensure_installed = { 
+        'lua_ls', 
+        'rust_analyzer', 
+        'intelephense', 
+        'gopls', 
+        'bashls',
+        'dockerls',
+        'jsonls',
+        'yamlls',
+        'pyright',
+    },
 })
 
 
@@ -61,7 +70,7 @@ end
 -- How to add LSP for a specific language?
 -- 1. use `:Mason` to install corresponding LSP
 -- 2. add configuration below
-lspconfig.pylsp.setup({
+lspconfig.pyright.setup({
     on_attach = on_attach,
 })
 
@@ -93,7 +102,9 @@ lspconfig.lua_ls.setup {
     },
 }
 
-lspconfig.bashls.setup({})
+lspconfig.bashls.setup({
+    on_attach = on_attach,
+})
 
 -- source: https://rust-analyzer.github.io/manual.html#nvim-lsp
 lspconfig.rust_analyzer.setup({
@@ -112,6 +123,18 @@ lspconfig.clangd.setup({
 })
 
 lspconfig.intelephense.setup({
+    on_attach = on_attach,
+})
+
+lspconfig.dockerls.setup({
+    on_attach = on_attach,
+})
+
+lspconfig.jsonls.setup({
+    on_attach = on_attach,
+})
+
+lspconfig.yamlls.setup({
     on_attach = on_attach,
 })
 

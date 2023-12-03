@@ -30,8 +30,7 @@ vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
 
---floaterm 永远的神
-
+--floaterm
 vim.keymap.set('n', '<C-p>', ':FloatermPrev<CR>', opts)
 vim.keymap.set('n', '<C-n>', ':FloatermNew<CR>', opts)
 vim.keymap.set('n', '<C-t>', ':FloatermToggle<CR>', opts)

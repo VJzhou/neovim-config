@@ -35,6 +35,7 @@ return require('packer').startup(function(use)
         -- Packer can manage itself
         use 'wbthomason/packer.nvim'
         use 'tanvirtin/monokai.nvim'
+        -- use 'folke/tokyonight.nvim'
         use 'voldikss/vim-floaterm'
         -- nvim-cmp
         use { 'williamboman/mason.nvim' }
