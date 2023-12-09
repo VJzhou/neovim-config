@@ -37,7 +37,7 @@ return {
         --   "emmet_ls",
           "prismals",
           "pyright",
-        --   "intelephense",
+          -- "intelephense",
           "phpactor",
           "rust_analyzer",
           "gopls",
